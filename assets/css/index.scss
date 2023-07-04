@@ -1,4 +1,7 @@
 $myfont:"Amatic SC", sans-serif;
+$mybackcolor:#333;
+$mycolor:white;
+$myfontsize:100px;
 body{
     font-family: $myfont;
     position: relative;
@@ -12,8 +15,8 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
-    color: #fff;
+    background-color: $mybackcolor;
+    color: $mycolor;
     opacity: 0.3;
     line-height: 30px;
     z-index: 100;
@@ -21,16 +24,18 @@ body{
         opacity: 1;
     }
     a{
-        font-size: x-large;
+        $myfontsize:x-large;
+        font-size:$myfontsize ;
         float: left;
-        color: white;
+        color: $mycolor;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
         line-height: inherit;
     }
     a:hover{
-        background-color:blue;
+        $mybackcolor:blue;
+        background-color:$mybackcolor;
     }
 }
 .main{
@@ -42,13 +47,13 @@ body{
     background-size: cover;
     background-position: center top;
     position: relative;
-    
-    color: antiquewhite;
+    $mycolor:antiquewhite;
+    color: $mycolor;
     padding-top: 50px; /* adjust this value to match navbar height */
     z-index: 1;
     .first{
         position: absolute;
-        font-size: 100px;
+        font-size:$myfontsize ;
         top: 9%; /* adjust vertical positioning */
         left: 50%; /* adjust horizontal positioning */
         transform: translate(-50%, -50%);
@@ -56,14 +61,15 @@ body{
     }
     .second{
         position: absolute;
-        font-size: 100px;
+        font-size: $myfontsize;
         top: 32%; /* adjust vertical positioning */
         left: 50%; /* adjust horizontal positioning */
         transform: translate(-50%, -50%);
     }
     .third{
         position: absolute;
-        background-color: black;
+        $mybackcolor:black;
+        background-color: $mybackcolor;
         text-align: center;
         padding:8px 16px;
         display: inline-block;
@@ -72,17 +78,22 @@ body{
         transform: translate(-50%,-50%);
         a{
             text-decoration: none;
-            font-size: 36px;
-            color: aliceblue;
+            $mycolor:aliceblue;
+            $myfontsize:36px;
+            font-size: $myfontsize;
+            color: $mycolor ;
         }
     }
     .fourth{
         position: absolute;
-        font-size: 24px;
-        color: #fff;
+        $mybackcolor:black;
+        $mycolor:#fff;
+        $myfontsize:24px;
+        font-size:$myfontsize ;
+        color:  $mycolor;
         display: inline-block;
         
-        background-color: black;
+        background-color: $mybackcolor;
         padding-left: 8px;
         padding-right: 8px;
         left: 1%;
@@ -97,6 +108,7 @@ body{
     left: 0;
     width: 100%;
     height: 77px; /* Adjust the height as needed */
-    background-color:black; /* Adjust the color as needed */
+    $mybackcolor:black;
+    background-color:$mybackcolor; /* Adjust the color as needed */
     z-index: 9999; /* Ensure the border stays on top of other elements */
 }
